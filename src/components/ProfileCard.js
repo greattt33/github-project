@@ -8,10 +8,11 @@ import styled from "styled-components"
 
 
 const ProfileCard=()=>{
+    const dispatch= useDispatch()
     
-    const [data,loading]= useSelector((state)=>{state.data})
+    
+    const {data,loading}= useSelector((state)=>state.data)
     useEffect(()=>{
-        const dispatch= useDispatch()
         dispatch(getPost())
         
     },[])

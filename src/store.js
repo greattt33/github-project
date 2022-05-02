@@ -1,10 +1,12 @@
-import postSlice from "./features/postSlice"
+import dataReducer from "./features/postSlice"
+import titleReducer from "./features/postSlice"
+
 import {configureStore} from "@reduxjs/toolkit"
 
 
 export default configureStore({
     reducer:{
-        data:postSlice,
-        title:postSlice
+        data:dataReducer,
+        title:titleReducer
     }
 })

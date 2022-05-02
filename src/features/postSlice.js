@@ -16,7 +16,7 @@ const postSlice=createSlice({
         title:[],
         loading:false
     },
-    extraReducer:{
+    extraReducers:{
         [getPost.loading]:(state,action)=>{
             state.loading=true
         },
@@ -24,11 +24,11 @@ const postSlice=createSlice({
             state.loading=true
         },
         [getPost.fulfilled]:(state,action)=>{
-            state.loading=false,
+            state.loading=false;
             state.data=action.payload
         },
         [getRepo.fulfilled]:(state,action)=>{
-            state.loading=false,
+            state.loading=false;
             state.title=action.payload
         },
         [getPost.rejected]:(state,action)=>{
@@ -40,4 +40,4 @@ const postSlice=createSlice({
     }
 })     
 
-export default postSlice
+export default postSlice.reducer

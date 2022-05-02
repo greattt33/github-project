@@ -19,7 +19,7 @@ const Home= ()=>{
             <Options>
               <button onClick={()=>{setFill("this is overview")}}>Overview</button>
               <button onClick={()=>{setFill(<Repos/>)}}>
-                Repositories <span>{counts[0].length}</span>
+                Repositories <span>{counts[0]}</span>
               </button>
               <button onClick={()=>{setFill("this is project")}}>
                 Project
@@ -67,6 +67,7 @@ const RepoSpace=styled.div`
   flex-direction:column;
   justify-content:center;
   background-color:white;
+ 
 `
 const Options=styled.div`
   width:100%;
