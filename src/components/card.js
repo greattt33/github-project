@@ -7,7 +7,7 @@ const Card=(props)=>{
       <CardStyle>
           <RepoDetail>
             <RepoTitle>
-              <Title>{props.title}</Title>
+              <Title><a href={props.html}>{props.title}</a></Title>
               <Scope>{props.visibility}</Scope>
             </RepoTitle>
             <Brief>{props.description}</Brief>
