@@ -5,10 +5,11 @@ import {useDispatch,useSelector} from "react-redux"
 import {getRepo} from "../features/postSlice"
 
 function Repos() {
-    const [title,loading]=useSelector(state=>{state.title})
-    const dispatch= useDispatch();
+    const [title,loading]=useSelector((state)=>{state.title})
+    
     counts.push(title);
     useEffect(()=>{
+      const dispatch= useDispatch();
       dispatch(getRepo())
     },[])
   return (

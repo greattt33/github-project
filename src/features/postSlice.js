@@ -2,12 +2,12 @@ import {createSlice,createAsyncThunk} from "@reduxjs/toolkit"
 
 export const getPost=createAsyncThunk("data/getPost",async ()=>{
     return fetch("https://api.github.com/users/greattt33")
-      .then(response=>response.json())})
+      .then((response)=>response.json())})
 
 
  export const getRepo=createAsyncThunk("title/getRepo",async ()=>{
         return fetch("https://api.github.com/users/greattt33/repos")
-          .then(response=>response.json())})    
+          .then((response)=>response.json())})    
 
 const postSlice=createSlice({
     name:["data","title"],
