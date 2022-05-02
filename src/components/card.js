@@ -65,6 +65,12 @@ export const Title=styled.p`
    font-size:larger;
    font-weight:bold;
    color:blue;
+ a{
+  text-decoration:none;
+&:clicked{
+  color:blue;
+}
+}
 `
 export const Scope=styled.div`
    width:80px;
