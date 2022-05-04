@@ -27,7 +27,7 @@ function Repos() {
            
             title.slice(0,20).map((repo)=>{
                 return(
-                    <Card title={repo.full_name} description={repo.description} visibility={repo.visibility} topic={repo.language} watchers={repo.watchers}
+                    <Card title={repo.full_name} html={repo.html_url} description={repo.description} visibility={repo.visibility} topic={repo.language} watchers={repo.watchers}
                     updated_at={repo.updated_at}/>
                 )
                 
