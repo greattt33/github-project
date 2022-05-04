@@ -2,14 +2,17 @@ import React,{useState} from "react"
 import styled from "styled-components"
 import ProfileCard from "./ProfileCard"
 import Repos,{counts} from "./repos"
-import {FaStar}
- from "react-icons/fa"
+import {FaStar} from "react-icons/fa"
+import {useSelector} from "react-redux"
+
+ 
 
 
 const Home= ()=>{
   const [fill,setFill]= useState(<Repos/>)
-  
-    
+  const {title} = useSelector((state)=>state.title)
+  const [value,setValue]= useState("")
+  newValue.push(value)
     return(
         <HomeBody>
           <ProfileC>
@@ -19,7 +22,7 @@ const Home= ()=>{
             <Options>
               <button onClick={()=>{setFill("this is overview")}}>Overview</button>
               <button onClick={()=>{setFill(<Repos/>)}}>
-                Repositories <span>{counts[0]}</span>
+                Repositories <span>{title.length}</span>
               </button>
               <button onClick={()=>{setFill("this is project")}}>
                 Project
@@ -32,7 +35,7 @@ const Home= ()=>{
               </button>
             </Options>
             <SearchSpace>
-              <input placeholder="Find a repository"/>
+              <input placeholder="Find a repository" onChange={(e)=>setValue(e.target.value)}/>
               <select><option>Languages</option></select>
               <select> <option>Type</option></select>
               <select name="Sort"> 
@@ -46,6 +49,7 @@ const Home= ()=>{
         </HomeBody>
     )
 }
+export const newValue=[]
 
 const HomeBody=styled.div`
   width:100%;

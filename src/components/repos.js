@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import Card from "./card"
 import styled from "styled-components"
 import {useDispatch,useSelector} from "react-redux"
+
 import {getRepo} from "../features/postSlice"
 
 function Repos() {

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import {FaStar,FaArrowDown} from "react-icons/fa"
+import {FaStar} from "react-icons/fa"
+import {RiArrowDropDownLine} from "react-icons/ri"
  
 const Card=(props)=>{
     return(
@@ -28,7 +29,7 @@ const Card=(props)=>{
                <span>Star{props.watchers}</span>
              </StatBody>
              <DropDown>
-                <FaArrowDown/>
+                <RiArrowDropDownLine/>
              </DropDown>
           </RepoStat>
       </CardStyle>
